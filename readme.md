@@ -3,6 +3,41 @@
 I know there are algorithms to solve these puzzles (likely in a better way), but I went at this without researching any
 of them to test my own capabilities to take a reasonably complex logical problem into some algorithms.
 
+# Preview
+
+![Output Preview](img/preview.png)
+
+# Board Format
+
+The board is broken out into 81 Cell objects.
+
+Each Cell has an X and Y value
+
+X increases from left to right, and y increases from top to bottom
+
+Example: Here is a table with the values for the first 2 rows
+
+| y | x | val |
+|---|---|---|
+| 1 | 1 |  |
+| 1 | 2 | 6 |
+| 1 | 3 |  |
+| 1 | 4 | 9 |
+| 1 | 5 | 8 |
+| 1 | 6 | 3 |
+| 1 | 7 |  |
+| 1 | 8 | 7 |
+| 1 | 9 |  |
+| 2 | 1 | 3 |
+| 2 | 2 | 9  |
+| 2 | 3 |  |
+| 2 | 4 |  |
+| 2 | 5 | 1 |
+| 2 | 6 |  |
+| 2 | 7 | 6 |
+| 2 | 8 | 2 |
+| 2 | 9 |  |
+
 # TODO
 
 * Board Org

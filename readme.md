@@ -1,3 +1,8 @@
+# Readme
+
+I know there are algorithms to solve these puzzles (likely in a better way), but I went at this without researching any
+of them to test my own capabilities to take a reasonably complex logical problem into some algorithms.
+
 # TODO
 
 * Board Org

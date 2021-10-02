@@ -7,11 +7,11 @@ of them to test my own capabilities to take a reasonably complex logical problem
 
 ![Output Preview](img/preview.png)
 
-# Board Format
+Current used Solutions take it this far
 
-The board is broken out into 81 Cell objects.
+# Cells
 
-Each Cell has an X and Y value
+The board is broken out into 81 Cell objects. Each Cell has an X and Y value
 
 X increases from left to right, and y increases from top to bottom
 
@@ -37,6 +37,21 @@ Example: Here is a table with the values for the first 2 rows
 | 2 | 7 | 6 |
 | 2 | 8 | 2 |
 | 2 | 9 |  |
+
+# Sectors
+
+I also have defined sectors, groups of 9 cells in a square, so sector 1,1 refers to the top left square
+
+# Workflow
+
+The system starts by creating a blank board, which means 81 cells are generated with no value
+
+right now, we also run a secondary process which fills the board with some default data (pictured)
+
+Then we run `Solve()` 81 times - because you shouldn't need more than 81 moves to finish a sudoku board.
+
+the `Solve()` function should do 1 manipulation per run and display an output of what it does, basically it tries to run
+each type of solution once, and if it's successful, it will return a string with the description of the solution
 
 # TODO
 

@@ -2,29 +2,24 @@ package src
 
 import "fmt"
 
-func (b *Board) checkCrossFillBySector() string {
+func (b *Board) checkCrossFillWithTwoSectors() string {
 	for _, c := range solvedCells(b.Cells) {
 		sectorX, sectorY := c.getSectorXY()
-		//_, sectorY := c.getSectorXY()
 
 		// Get horizontally related sectors
 		horizontalSectors := b.horizontallyRelatedSectors(sectorY)
 		verticalSectors := b.verticallyRelatedSectors(sectorX)
 
 		if checkNumberOfSectorsWithValue(horizontalSectors, c.Value) == 2 {
-			//fmt.Printf("\nPossible Horizontal Crossfill on cell [%d, %d]:%d\n", c.X, c.Y, c.Value)
 			retHVal := b.attemptHorizontalCrossFill(horizontalSectors, c.Value)
 			if retHVal != "" {
-				//fmt.Printf("Successful Crossfill [%d, %d]:%d : %s \n", c.X, c.Y, c.Value, retHVal)
 				return fmt.Sprintf("Horizontal Crossfill: %s", retHVal)
 			}
 		}
 
 		if checkNumberOfSectorsWithValue(verticalSectors, c.Value) == 2 {
-			//fmt.Printf("\nPossible Vertical Crossfill on cell [%d, %d]:%d\n", c.X, c.Y, c.Value)
 			retVVal := b.attemptVerticalCrossFill(verticalSectors, c.Value)
 			if retVVal != "" {
-				//fmt.Printf("Successful Crossfill [%d, %d]:%d : %s \n", c.X, c.Y, c.Value, retVVal)
 				return fmt.Sprintf("Vertical Crossfill: %s", retVVal)
 			}
 		}

@@ -19,9 +19,4 @@ func main() {
 			return
 		}
 	}
-	//
-	//for i := 0; i < 5; i++ {
-	//	b.Solve()
-	//	b.Print()
-	//}
 }

@@ -31,15 +31,14 @@ func (b *Board) Solve() bool {
 		didSomething = true
 	}
 
-	fmt.Printf("[Crossfill-By-Sector] Checking Crossfills...")
-	retVal = b.checkCrossFillBySector()
+	fmt.Printf("[Crossfill-with-two-sectors] Checking Crossfills...")
+	retVal = b.checkCrossFillWithTwoSectors()
 	if retVal == "" {
 		fmt.Printf("done. (no action) \n")
 	} else {
 		fmt.Printf("done.  %s \n", retVal)
 		didSomething = true
 	}
-
 
 	return didSomething
 }
